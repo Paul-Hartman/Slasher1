@@ -1,0 +1,102 @@
+# Ignore Visual Studio files
+.vscode/
+.vs/
+*.VC.db
+*.VC.VC.opendb
+*.VC.db-shm
+*.VC.db-wal
+*.VC.opendb
+
+# Ignore build and intermediate files
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+Script/
+Source/UE4Editor/
+
+# Ignore project files
+*.opensdf
+*.sdf
+*.suo
+*.user
+*.userosscache
+*.usertask
+*.log
+*.tlog
+*.pdb
+*.db
+*.opendb
+
+# Ignore compiled dynamic libraries
+*.dll
+*.exe
+*.so
+*.dylib
+
+# Ignore generated files
+*.gen.cpp
+*.gen.h
+*.generated.cpp
+*.generated.h
+
+# Ignore binary assets
+*.obj
+*.o
+*.lib
+*.a
+*.exp
+*.app
+*.log
+*.sln
+
+# Ignore Unreal auto-generated files
+*.idb
+*.ipdb
+*.iobj
+*.ipch
+*.pch
+
+# Ignore macOS files
+.DS_Store
+
+# Ignore Windows specific files
+Thumbs.db
+Desktop.ini
+
+# Ignore crash reports and log files
+*.dmp
+*.log
+
+# Ignore Python compiled files
+__pycache__/
+*.py[cod]
+
+# Ignore Unreal Plugin files
+Plugins/*/Binaries/
+Plugins/*/Intermediate/
+
+# Ignore Unreal Engine specific folders
+*.uprojectdirs
+*.UProjectHash
+
+# Ignore Unreal Engine crash reports
+Saved/Crashes/
+
+# Ignore specific Unreal folders for version control
+Config/
+Script/
+
+# Ignore all .uasset and .umap files by default
+*.uasset
+*.umap
+
+# Except for specific ones in the Content directory that you want to include
+!Content/MyImportantAsset.uasset
+!Content/MyMap.umap
+
+# You might also want to keep the following directory structure intact
+# If you want to keep some .uasset files in a specific folder:
+!Content/MyAssetsFolder/*.uasset
+
