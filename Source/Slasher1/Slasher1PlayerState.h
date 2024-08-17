@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerState.h"
+#include "Hand.h"  // Include the header file for your UHand class
 #include "Slasher1PlayerState.generated.h"
 
 /**
@@ -31,7 +32,7 @@ protected:
 
     // The player's hand of special cards
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Cards")
-    TArray<class ACard*> SpecialCardHand;
+    UHand* Hand;
 
 public:
     // Functions to manage the player's score
@@ -53,5 +54,5 @@ public:
     void RemoveCardFromHand(class ACard* CardToRemove);
 
     UFUNCTION(BlueprintCallable, Category = "Cards")
-    const TArray<class ACard*>& GetSpecialCardHand() const;
+    UHand* GetHand() const;
 };

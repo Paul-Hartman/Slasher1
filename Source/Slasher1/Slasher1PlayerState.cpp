@@ -12,7 +12,7 @@ ASlasher1PlayerState::ASlasher1PlayerState()
     PlayerPosition = FVector::ZeroVector;  // Start at the origin (0, 0, 0)
 
     // Initialize the player's hand (empty at the start)
-    SpecialCardHand = TArray<ACard*>();
+    Hand = CreateDefaultSubobject<UHand>(TEXT("SpecialCardHand"));
 }
 
 void ASlasher1PlayerState::AddScore(int32 Points)
@@ -34,21 +34,21 @@ FVector ASlasher1PlayerState::GetPlayerPosition() const
 
 void ASlasher1PlayerState::AddCardToHand(ACard* NewCard)
 {
-    if (NewCard)
+    if (Hand)
     {
-        SpecialCardHand.Add(NewCard);
+        Hand->AddCard(NewCard);
     }
 }
 
 void ASlasher1PlayerState::RemoveCardFromHand(ACard* CardToRemove)
 {
-    if (CardToRemove)
+    if (Hand)
     {
-        SpecialCardHand.Remove(CardToRemove);
+        Hand->RemoveCard(CardToRemove);
     }
 }
 
-const TArray<ACard*>& ASlasher1PlayerState::GetSpecialCardHand() const
+UHand* ASlasher1PlayerState::GetHand() const
 {
-    return SpecialCardHand;
+    return Hand;
 }

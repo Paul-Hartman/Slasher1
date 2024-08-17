@@ -4,7 +4,16 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Slasher1Character.h"  // Include only if you need to directly interact with ASlasher1Character
+#include "Components/BoxComponent.h"
+#include "Slasher1PlayerState.h"
+#include "Hand.h"
 #include "Card.generated.h"
+
+
+
+
+//class Slasher1Character;
 
 UCLASS()
 class SLASHER1_API ACard : public AActor
@@ -53,6 +62,12 @@ protected:
     // Flavor text for the card
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Card")
     FString FlavorText;
+
+   UFUNCTION(BlueprintCallable, Category = "Card")
+   void OnCardFlipped(ASlasher1Character* Character);
+
+   UFUNCTION()
+   void OnOverlapBegin(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult);
 
 
 

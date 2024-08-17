@@ -65,8 +65,7 @@ Source/UE4Editor/
 Thumbs.db
 Desktop.ini
 
-# Ignore crash reports and log files
-*.dmp
+# Ignore crash reports and log filesazXLI ,K
 *.log
 
 # Ignore Python compiled files
