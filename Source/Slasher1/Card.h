@@ -4,16 +4,14 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "Slasher1Character.h"  // Include only if you need to directly interact with ASlasher1Character
 #include "Components/BoxComponent.h"
-#include "Slasher1PlayerState.h"
-#include "Hand.h"
 #include "Card.generated.h"
 
 
 
-
-//class Slasher1Character;
+class ASlasher1Character; // Forward declaration
+class ASlasher1PlayerState; // Forward declaration
+class UHand; // Forward declaration
 
 UCLASS()
 class SLASHER1_API ACard : public AActor

@@ -4,12 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerState.h"
-#include "Hand.h"  // Include the header file for your UHand class
 #include "Slasher1PlayerState.generated.h"
 
 /**
  * 
  */
+class UHand;
 class ACard;
 UCLASS()
 class SLASHER1_API ASlasher1PlayerState : public APlayerState

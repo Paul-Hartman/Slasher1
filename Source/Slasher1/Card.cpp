@@ -2,6 +2,9 @@
 
 
 #include "Card.h"
+#include "Hand.h"  
+#include "Slasher1Character.h"
+#include "Slasher1PlayerState.h"
 
 // Sets default values
 

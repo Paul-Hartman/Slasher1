@@ -1,8 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "Slasher1PlayerState.h"
-#include "GameFramework/Actor.h"
-#include "Card.h"  
+#include "Card.h" 
+#include "Hand.h"
 
 
 ASlasher1PlayerState::ASlasher1PlayerState()
